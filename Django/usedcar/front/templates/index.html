@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load  static %}
+    <title>Title</title>
+</head>
+<body style="background-color: gray">
+    <p>
+         登录人：{{ request.user.username }}
+    </p>
+   <p>
+       验证码:<img src="/userinfo/verifycode/">
+   </p>
+
+
+</body>
+</html>
