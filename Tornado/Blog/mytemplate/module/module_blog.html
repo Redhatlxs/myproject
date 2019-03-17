@@ -1,0 +1,65 @@
+ <!--宽度为body的80%　居中-->
+    <ul style="list-style-type: none;width: 80%;margin: 0px auto">
+        {%for blog in blogs%}
+        <li>
+            <!--表格间距-->
+            <table  cellspacing="5px" width="100%">
+                <tr>
+                    <td rowspan="4" align="center" width="25%">
+                        <!--两行一列-->
+                        <table >
+                            <tr>
+                                <td align="center">
+                                    <!--方型－圆形border-radius-->
+                                    <!--src="static/images/{{blog['avatar']}}"-->
+　　　　　　　　　　　　　　　　　　　 <img width="128px" height="128px" style="border-radius: 50%";
+                                    {% if blog['avatar']%}
+
+                                    src={{static_url('images/'+blog['avatar'])}}
+                                    {%else%}
+                                    src="static/images/default.jpg"
+                                    {%end%}
+                                    >
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                  <p>{{blog['author']}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        {{blog['title']}}
+                    </td>
+                </tr>
+                <!--第二行第二列-->
+                <tr>
+                    <td>
+                        {{''.join(blog['tag'])}}
+                    </td>
+                </tr>
+ 　　　　　　　　　<!--第三行第二列-->
+                <tr>
+                    <td>
+                       {{blog['content']}}
+                    </td>
+                </tr>
+                <!--第四行第二列-->
+    　　　　　　　<tr>
+                    <td align="right">
+                        <!--内置函数表达式-->
+                        {% if blog['comment']>0%}
+　　　　　　　　　　　　　　　评论数量：{{blog['comment']}}
+                        {%else%}
+                        没有评论
+                        {%end%}
+
+                    </td>
+                </tr>
+            </table>
+        </li>
+     {%end%}
+    </ul>

@@ -1,0 +1,15 @@
+{% extends base.html%}
+{%block title%}博客{%end%}
+    <!--导入静态资源-->
+    <!--<script src="static/js/jquery-1.11.3.js"></script>-->
+{%block head%}
+    <script src="{{static_url('js/jquery-1.11.3.js')}}"></script>
+    <script>
+        $(function () {
+            alert('hello');
+        });
+    </script>
+{%end%}
+{%block body%}
+    {%module myblogmodule()%}
+{%end%}

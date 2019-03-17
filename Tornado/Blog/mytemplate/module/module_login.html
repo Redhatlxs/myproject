@@ -1,0 +1,46 @@
+  <form method="post" action="/login">
+         <fieldset>
+             <legend>登录</legend>
+         <table>
+             <tr>
+                 <td colspan="2">
+                     <img id="img_avatar" width="128px" height="128px"
+                          src="static/images/default.jpg"
+                     style="border-radius:50%">
+                 </td>
+
+             </tr>
+
+             <tr>
+                 <td>用户名:</td>
+                 <td>
+                     <input id="input_name" type="text" name="uname">
+                 </td>
+             </tr>
+             <tr>
+                 <td>密码:</td>
+                 <td>
+                     <input type="password" name="upwd">
+                 </td>
+             </tr>
+             <!--向右合并两个单元格-->
+              <tr>
+                  <td colspan="2">{{result}}</td>
+              </tr>
+
+
+             <tr>
+                 <td>
+                      <input type="submit" value="提交">
+                     &nbsp;
+                 </td>
+                 <td>
+                      <input type="button" value="注册"
+                             onclick="javascript:location.href='/register';">
+                 </td>
+             </tr>
+
+         </table>
+
+         </fieldset>
+     </form>

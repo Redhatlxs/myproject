@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客</title>
+</head>
+<body>
+    <!--宽度为body的80%　居中-->
+    <ul style="list-style-type: none;width: 80%;margin: 0px auto">
+
+        <li>
+            <!--表格间距-->
+            <table  cellspacing="5px" width="100%">
+                <tr>
+                    <td rowspan="4" align="center" width="25%">
+                        <!--两行一列-->
+                        <table >
+                            <tr>
+                                <td align="center">
+                                    <!--方型－圆形border-radius-->
+　　　　　　　　　　　　　　　　　　　　<img width="128px" height="128px"
+                                 style="border-radius: 50%";
+                                 src="https://b-ssl.duitang.com/uploads/item/201604/28/20160428003439_rJ2YL.jpeg">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                  <p> 我是某某某</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        博客的标题
+                    </td>
+                </tr>
+                <!--第二行第二列-->
+                <tr>
+                    <td>
+                        情感　星座　男女
+                    </td>
+                </tr>
+ 　　　　　　　　　<!--第三行第二列-->
+                <tr>
+                    <td>
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                        博客的正文,好长好长的正文
+                    </td>
+                </tr>
+                <!--第四行第二列-->
+    　　　　　　　<tr>
+                    <td align="right">
+                        <!--内置函数表达式-->
+　　　　　　　　　　　　　　　评论数量：{{len('我是字符串')}}
+
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+
+        <li>
+              <!--表格间距-->
+            <table  cellspacing="5px" width="100%">
+                <tr>
+                    <td rowspan="4" align="center" width="25%">
+                        <!--两行一列-->
+                        <table >
+                            <tr>
+                                <td align="center">
+                                    <!--方型－圆形border-radius-->
+　　　　　　　　　　　　　　　　　　　　<img width="128px" height="128px"
+                                 style="border-radius: 50%";
+                                 src="https://b-ssl.duitang.com/uploads/item/201604/28/20160428003439_rJ2YL.jpeg">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <!--p标签不能超过100像素-->
+                                  <p style="width: 100px;white-space: nowrap;
+                                   overflow: hidden;text-overflow: ellipsis"> 我是一个很长很长的ID,长到一行放不下</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        博客的标题
+                    </td>
+                </tr>
+                <!--第二行第二列-->
+                <tr>
+                    <td>
+                        情感　星座　男女
+                    </td>
+                </tr>
+ 　　　　　　　　　<!--第三行第二列-->
+                <tr>
+                    <!--块标签渲染-->
+                    <!--<td style="min-height: 150px;display: block">-->
+                    <td>
+                        <p style="min-height: 150px;margin-top: 0px">博客的正文</p>
+                    </td>
+                </tr>
+                <!--第四行第二列-->
+    　　　　　　　<tr>
+                    <td align="right">
+                        <!--自定义函数-->
+　　　　　　　　　　　　　　　评论数量：{{myrand(100,200)}}
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</body>
+</html>

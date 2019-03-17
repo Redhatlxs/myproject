@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试转义</title>
+</head>
+<body>
+
+　　　　<form action="/" method="post">
+      <textarea rows="5" cols="25" name="text"></textarea>
+      <input type="submit" value="提交">
+      </form>
+      <!--语句标签　执行javascript 代码-->
+      {%raw result%}
+      <!--变量－转义文本-->
+　　　　{{result}}
+
+</body>
+</html>
+
+

@@ -1,0 +1,39 @@
+{% extends base.html%}
+{%block title%}登录界面{%end%}
+{%block head%}
+<script src="{{static_url('js/jquery-1.11.3.js')}}"></script>
+<script>
+    $(function () {
+        var input_name = $('#input_name');
+        var img_avatar = $('#img_avatar');
+
+        input_name.blur(function () {
+            var username = input_name.val();
+            if(username==""){
+                return;
+            }
+            $.ajax({
+                url:"/check",
+                data:{"username":username,'type':'findavatar'},
+                type:"post",
+                dataType:"json",
+                async:"true",
+                success:function (data,status,xhr) {
+                    console.log(data);
+                    var avatar = data.msg;
+                    img_avatar.attr("src","static/images/"+avatar);
+                },
+                error:function (xhr,status,error) {
+                    console.log("error");
+                }
+            })
+
+        })
+
+    });
+
+</script>
+{%end%}
+{%block body%}
+    {%module mymodule()%}
+{%end%}

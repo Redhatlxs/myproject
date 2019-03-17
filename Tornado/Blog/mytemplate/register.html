@@ -1,0 +1,52 @@
+{%extends base.html%}
+{%block title%}注册页面{%end%}
+{%block head%}
+    <script src="{{static_url('js/jquery-1.11.3.js')}}"></script>
+    <script>
+        $(function () {
+            var input_username = $('#input_username');
+            var span_result = $('#span_result');
+
+            input_username.blur(function () {
+                var username = input_username.val();
+                if(username==""){
+                    return;
+                }
+                $.ajax(
+                    {
+                        url:'/check',
+                        data:{'username':username,'type':'hasuser'},
+                        type:'post',
+                        dataType:'json',
+                        async:'true',
+                        success:function (data,status,xhr) {
+                            console.log('成功获取服务器请求');
+                            console.log(data);
+                            console.log(status);
+                            var msg = data.msg;
+                            if(msg=='ok'){
+                                span_result.text("该用户名可以使用");
+                                span_result.css("color","blue")
+                            }else {
+                                span_result.text('该用户可以被占用');
+                                  span_result.css("color","red")
+                            }
+                        },
+                        error:function (xhr,status,error) {
+                            console.log('获取服务器响应失败');
+                            console.log(error);
+                            console.log(status)
+
+                        }
+                    }
+                );
+            });
+
+
+
+        });
+    </script>
+{%end%}
+{%block body%}
+    {%module registmodule()%}
+{%end%}

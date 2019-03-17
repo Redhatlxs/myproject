@@ -1,0 +1,42 @@
+<form method="post" action="/register" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td>
+                <input id="input_username" type="text" name="uname">
+            </td>
+            <td>
+                <span id="span_result"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="upwd"></td>
+        </tr>
+        <tr>
+            <td>头像:</td>
+            <td><input type="file" name="avatar"></td>
+        </tr>
+        <tr>
+            <td>城市:</td>
+            <td><select name="city">
+                 <option value="beijing">北京</option>
+                 <option value="shanghai">上海</option>
+                 <option value="guangzhou">广州</option>
+            </select>
+            </td>
+        </tr>
+
+       <tr>
+           <td colspan="2">{{result}}</td>
+       </tr>
+
+        <tr>
+            <td><input type="submit" value="注册"></td>
+            <td><input type="reset" value="重置"></td>
+        </tr>
+    </table>
+
+
+</form>
